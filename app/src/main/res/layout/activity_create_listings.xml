@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My App"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etStreetAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Enter street address"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnGetCoordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Get Coordinates"
+            app:layout_constraintTop_toBottomOf="@+id/etStreetAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/etLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Enter latitude"
+            android:inputType="numberDecimal|numberSigned"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnGetCoordinates"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/etLng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter longitude"
+            android:inputType="numberDecimal|numberSigned"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/etLat"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnGetStreetAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Get Street Address"
+            app:layout_constraintTop_toBottomOf="@+id/etLng"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnGetCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Use My Current Location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGetStreetAddress" />
+
+        <EditText
+            android:id="@+id/txtImageURL"
+            android:layout_width="374dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:hint="Image URL"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/btnGetCurrentLocation"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/txtMonthlyRent"
+            android:layout_width="374dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:hint="Monthly Rent"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/txtImageURL"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/bedroomCount"
+            android:layout_width="374dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:hint="No. of Bedroom"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/txtMonthlyRent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/btnPostListings"
+            android:layout_width="191dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="16dp"
+            android:text="Post Listings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bedroomCount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
